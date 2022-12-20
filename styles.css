@@ -1,15 +1,24 @@
+@font-face {
+    font-family: general;
+    src: url('./assets/Comfortaa.ttf');
+}
+
 *{
     box-sizing: border-box !important;
     padding: 0;
     margin: 0;
     list-style: none;
     text-decoration: none;
-    font-family: 'Comfortaa', cursive;
+    font-family: general, cursive;
 }
+
+
 body{
     width: 100%;
     background-color: #BFAB67;
 }
+/* header y banner */
+
  /* fondoo tiny house */
 #tinyhouse-banner{
     position: relative;
@@ -21,7 +30,6 @@ body{
     background-position: center;
     z-index: -100;
 }
-
 
 header{
     position: relative;
@@ -35,7 +43,6 @@ header{
     z-index: 100;
 }
 
-
 #icon_menu{
     cursor: pointer;
     color: rgb(255, 255, 255);
@@ -44,7 +51,7 @@ header{
 }
 
 /* logo */
-div.logo a{
+.logo a{
     color: #fff;
     font-size: 2rem;
     line-height: 4rem;
@@ -52,7 +59,6 @@ div.logo a{
     font-weight: 400;
     color: #fff;
 }
-
 
 nav{
     position: absolute;
@@ -66,7 +72,6 @@ nav{
     /* transition: 0.2s; */
 }
 
-
 nav ul li:hover{
     background-color: #A4B75C;
 }
@@ -75,6 +80,7 @@ nav.active{
     height: calc(100vh - 80px);
 }
 
+/* display flex para mobile */
 nav ul{
     display: flex;
     width: 100%;
@@ -84,13 +90,11 @@ nav ul{
     align-items: center;
     opacity: 0;
 }
+
 nav.active ul{
     opacity: 1;
     transition: 0.2s;
 }
-/* nav ul li a::after{
-    background-color: #fff;
-} */
 
 nav ul li {
     margin-bottom: 5px ;
@@ -103,7 +107,7 @@ nav ul li {
     justify-content: center;
 }
 
-
+/* letras menu */
 nav ul li a{
     color: #000;
     display: block;
@@ -112,7 +116,6 @@ nav ul li a{
     text-transform: capitalize;
 }
 
-
 #banner_h1{
     width: 100%;
     text-align: center;
@@ -120,9 +123,11 @@ nav ul li a{
     position: absolute;
     top: 58%;
 }
+
 #banner_h1 h1{
     font-size: 3rem;
 }
+
 #banner_h1 h2{
     text-align: center;
 }
@@ -131,7 +136,9 @@ nav ul li a{
 
 
 
+
 /* OUR CABINS */
+
 #section_cabins{
     position: relative;
     top: -20px;
@@ -140,6 +147,7 @@ nav ul li a{
     align-items: center;
 }
 
+/* para todos los h2 */
 .title_h2{
     text-align: center;
     font-size: 2rem;
@@ -159,6 +167,7 @@ nav ul li a{
     position: absolute;
 }
 
+/* contenedor grid y ubicacion */
 #cabins-gridcontainer{
     display: grid;
     grid-template-columns: 100%;
@@ -244,19 +253,7 @@ nav ul li a{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* activities */
 
 #section_activities{
     position: relative;
@@ -264,11 +261,6 @@ nav ul li a{
     flex-direction: column;
     align-items: center;
 }
-
-
-
-
-
 
 .activities-container {
     position: relative;
@@ -334,6 +326,7 @@ color: white;
 .numbertext img{
     width: 100%;
 }
+
 
 
 
@@ -425,24 +418,62 @@ color: white;
     grid-row: 12/ span 1;
 }
 
+/* find us */
+#section_findus{
+    position: relative;
+    top: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#findus-gridcontainer{
+    display: grid;
+    width: 80%;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, auto);
+    padding: 10px;
+    justify-items: center;
+}
+
+#findus-add *{
+    padding: 10px;
+}
+
+#findus-add p{
+    position: relative;
+    right: -12px;
+}
+#findus-add * span{
+    position: relative;
+    top: 5px;
+    color: #7B4618;
+}
+
+#findus-gm-container{
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+#findus-gm-container iframe{
+    width: 90%;
+    height: fit-content;
+    max-width: 650px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* medias */
+/* media */
 
 @media only screen and (min-width: 960px){ 
 
@@ -466,8 +497,6 @@ nav{
 }
 
 
-
-
 /* nav */
 
 nav ul{
@@ -476,7 +505,6 @@ nav ul{
     height:fit-content;
     transition: 0;
 }
-
 
 
 nav ul li{
@@ -522,9 +550,6 @@ nav ul li:hover{
 #banner_h1 h2{
     text-align: right;
 }
-
-
-
 
 
 
@@ -690,8 +715,21 @@ p{
 }
 
 
+#findus-gridcontainer{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+}
 
+#findus-add{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+#findus-gm-container iframe{
+    width: 90%;
+    height: auto;
+}
 
     
 }
